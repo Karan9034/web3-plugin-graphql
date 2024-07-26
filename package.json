@@ -1,6 +1,6 @@
 {
   "name": "web3-plugin-subgraph",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Subgraph plugin for web3.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
