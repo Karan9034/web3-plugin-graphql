@@ -1,18 +1,18 @@
 import { Web3PluginBase } from "web3";
 import { Client, cacheExchange, fetchExchange, DocumentInput, AnyVariables } from '@urql/core';
 
-export class SubgraphPlugin extends Web3PluginBase {
-    public pluginNamespace = "Subgraph";
-    private subgraphURL = "";
+export class GraphQLPlugin extends Web3PluginBase {
+    public pluginNamespace = "GraphQL";
+    private graphqlURL = "";
     private urqlClient: Client | null = null;
 
 
     public getURL = (): string => {
-        return this.subgraphURL;
+        return this.graphqlURL;
     }
 
     public setURL = (url:string) : void => {
-        this.subgraphURL = url;
+        this.graphqlURL = url;
         this.urqlClient = new Client({
             url: url,
             exchanges: [cacheExchange, fetchExchange]
@@ -20,7 +20,7 @@ export class SubgraphPlugin extends Web3PluginBase {
     }
 
     public sendQuery = async (query: DocumentInput<any, AnyVariables>, variables: AnyVariables) => {
-        if(this.urqlClient == null) throw "Subgraph URL Missing";
+        if(this.urqlClient == null) throw "GraphQL URL Missing";
         const result = await this.urqlClient.query(query, variables)
         return result;
     }
@@ -29,6 +29,6 @@ export class SubgraphPlugin extends Web3PluginBase {
 
 declare module "web3" {
     interface Web3Context {
-        Subgraph: SubgraphPlugin;
+        GraphQL: GraphQLPlugin;
     }
 }

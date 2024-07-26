@@ -1,12 +1,12 @@
 {
-  "name": "web3-plugin-subgraph",
-  "version": "0.0.1",
-  "description": "Subgraph plugin for web3.js",
+  "name": "web3-plugin-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL plugin for web3.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/web3/web3-plugin-subgraph#readme",
+  "homepage": "https://github.com/web3/web3-plugin-graphql#readme",
   "bugs": {
-    "url": "https://github.com/web3/web3-plugin-subgraph/issues"
+    "url": "https://github.com/web3/web3-plugin-graphql/issues"
   },
   "scripts": {
     "lint": "eslint \"{src,test}/**/*.ts\"",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Karan9034/web3-plugin-subgraph.git"
+    "url": "git@github.com:Karan9034/web3-plugin-graphql.git"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
