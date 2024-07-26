@@ -1,15 +1,21 @@
 import Web3, { Web3Eth, core } from "web3";
 import { SubgraphPlugin } from "../src";
 
-const SUBGRAPH_URL = "https://api.thegraph.com/subgraphs/name/karan9034/random-lottery";
+const SUBGRAPH_URL = "https://gateway-arbitrum.network.thegraph.com/api/344d17813d0efa14bbdb243d75427985/subgraphs/id/Sxx812XgeKyzQPaBpR5YZWmGV5fZuBaPdh7DFhzSwiQ";
 const SAMPLE_QUERY = `
 {
-    games(first: 5) {
-      id
-      maxPlayers
-      entryFee
-      winner
-    }
+  lidoConfigs(first: 5) {
+    id
+    insuranceFund
+    oracle
+    treasury
+  }
+  lidoTransfers(first: 5) {
+    id
+    from
+    to
+    value
+  }
 }
 `
 
